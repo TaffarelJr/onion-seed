@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <Description>Contains common components, utilities, and scaffolding to enable applications to be created more quickly, following the tenets of DDD and Onion Architecture.</Description>
+        <RepositoryUrl>https://github.com/TaffarelJr/OnionSeed.Data.git</RepositoryUrl>
+    </PropertyGroup>
+
+    <Import Project="..\..\Production.props" />
+
+</Project>

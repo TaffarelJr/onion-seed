@@ -7,11 +7,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
+		Common.props = Common.props
 		LICENSE = LICENSE
+		Production.props = Production.props
 		README.md = README.md
+		StyleCop.json = StyleCop.json
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5CD628AE-70FF-43A3-B93C-970B10A0E453}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnionSeed", "src\OnionSeed\OnionSeed.csproj", "{A39AED77-82DC-40D9-82DC-A5F84FB6BF34}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{7CE5AA7A-E44B-4790-B310-EB1F2B446179}"
 	ProjectSection(SolutionItems) = preProject
@@ -19,8 +24,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{7CE5AA7A-E
 	EndProjectSection
 EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A39AED77-82DC-40D9-82DC-A5F84FB6BF34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A39AED77-82DC-40D9-82DC-A5F84FB6BF34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A39AED77-82DC-40D9-82DC-A5F84FB6BF34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A39AED77-82DC-40D9-82DC-A5F84FB6BF34}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A39AED77-82DC-40D9-82DC-A5F84FB6BF34} = {5CD628AE-70FF-43A3-B93C-970B10A0E453}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A32DEF8E-AE81-4624-8710-AAC822A86D3D}
