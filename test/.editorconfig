@@ -2,6 +2,7 @@
 
 [*.cs]
 # CodeAnalysis - Design Rules
+dotnet_diagnostic.CA1014.severity = none # Mark assemblies with CLSCompliant
 dotnet_diagnostic.CA1063.severity = none # Implement IDisposable Correctly
 
 # CodeAnalysis - Globalization rules

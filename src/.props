@@ -9,6 +9,6 @@
         <IsPackable>true</IsPackable>
     </PropertyGroup>
 
-    <Import Project="Common.props" />
+    <Import Project="..\.props" />
 
 </Project>
