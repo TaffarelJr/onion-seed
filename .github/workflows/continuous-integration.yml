@@ -1,0 +1,26 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches:
+      - "**"
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+          submodules: true
+
+      - name: Restore dependencies
+        run: dotnet restore --verbosity minimal
+
+      - name: Build source code
+        run: dotnet build --no-restore --configuration Debug --verbosity minimal
+
+      - name: Run unit tests
+        run: dotnet test .\test\OnionSeed.UnitTests --no-build --no-restore --configuration Debug --verbosity minimal /p:CollectCoverage=true /p:CoverletOutput=TestResults/ /p:CoverletOutputFormat=lcov
