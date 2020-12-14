@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OnionSeed</name>
+    </assembly>
+    <members>
+        <member name="T:System.ComparableExtensions">
+            <summary>
+            Contains extension methods for the <see cref="T:System.IComparable"/> interface, to make it more fluent.
+            </summary>
+        </member>
+        <member name="M:System.ComparableExtensions.IsEqualTo(System.IComparable,System.Object)">
+            <summary>
+            Returns a value indicating whether <paramref name="source"/> is equal to <paramref name="other"/>.
+            </summary>
+            <param name="source">The source value.</param>
+            <param name="other">The other value being compared to <paramref name="source"/>.</param>
+            <returns><b>true</b> if <paramref name="source"/> is equal to <paramref name="other"/>; otherwise, <b>false</b>.</returns>
+            <exception cref="T:System.ArgumentException"><paramref name="other"/> is not the same type as <paramref name="source"/>.</exception>
+        </member>
+        <member name="M:System.ComparableExtensions.IsNotEqualTo(System.IComparable,System.Object)">
+            <summary>
+            Returns a value indicating whether <paramref name="source"/> is not equal to <paramref name="other"/>.
+            </summary>
+            <param name="source">The source value.</param>
+            <param name="other">The other value being compared to <paramref name="source"/>.</param>
+            <returns><b>true</b> if <paramref name="source"/> is not equal to <paramref name="other"/>; otherwise, <b>false</b>.</returns>
+            <exception cref="T:System.ArgumentException"><paramref name="other"/> is not the same type as <paramref name="source"/>.</exception>
+        </member>
+        <member name="M:System.ComparableExtensions.IsLessThan(System.IComparable,System.Object)">
+            <summary>
+            Returns a value indicating whether <paramref name="source"/> is less than <paramref name="other"/>.
+            </summary>
+            <param name="source">The source value.</param>
+            <param name="other">The other value being compared to <paramref name="source"/>.</param>
+            <returns><b>true</b> if <paramref name="source"/> is less than <paramref name="other"/>; otherwise, <b>false</b>.</returns>
+            <exception cref="T:System.ArgumentException"><paramref name="other"/> is not the same type as <paramref name="source"/>.</exception>
+        </member>
+        <member name="M:System.ComparableExtensions.IsLessThanOrEqualTo(System.IComparable,System.Object)">
+            <summary>
+            Returns a value indicating whether <paramref name="source"/> is less than or equal to <paramref name="other"/>.
+            </summary>
+            <param name="source">The source value.</param>
+            <param name="other">The other value being compared to <paramref name="source"/>.</param>
+            <returns><b>true</b> if <paramref name="source"/> is less than or equal to <paramref name="other"/>; otherwise, <b>false</b>.</returns>
+            <exception cref="T:System.ArgumentException"><paramref name="other"/> is not the same type as <paramref name="source"/>.</exception>
+        </member>
+        <member name="M:System.ComparableExtensions.IsGreaterThan(System.IComparable,System.Object)">
+            <summary>
+            Returns a value indicating whether <paramref name="source"/> is greater than <paramref name="other"/>.
+            </summary>
+            <param name="source">The source value.</param>
+            <param name="other">The other value being compared to <paramref name="source"/>.</param>
+            <returns><b>true</b> if <paramref name="source"/> is greater than <paramref name="other"/>; otherwise, <b>false</b>.</returns>
+            <exception cref="T:System.ArgumentException"><paramref name="other"/> is not the same type as <paramref name="source"/>.</exception>
+        </member>
+        <member name="M:System.ComparableExtensions.IsGreaterThanOrEqualTo(System.IComparable,System.Object)">
+            <summary>
+            Returns a value indicating whether <paramref name="source"/> is greater than or equal to <paramref name="other"/>.
+            </summary>
+            <param name="source">The source value.</param>
+            <param name="other">The other value being compared to <paramref name="source"/>.</param>
+            <returns><b>true</b> if <paramref name="source"/> is greater than or equal to <paramref name="other"/>; otherwise, <b>false</b>.</returns>
+            <exception cref="T:System.ArgumentException"><paramref name="other"/> is not the same type as <paramref name="source"/>.</exception>
+        </member>
+        <member name="M:System.ComparableExtensions.IsBetween(System.IComparable,System.Object,System.Object)">
+            <summary>
+            Returns a value indicating whether <paramref name="source"/> is between <paramref name="min"/> and <paramref name="max"/> (inclusive).
+            </summary>
+            <param name="source">The source value.</param>
+            <param name="min">The minimum value being compared to <paramref name="source"/>.</param>
+            <param name="max">The maximum value being compared to <paramref name="source"/>.</param>
+            <returns><b>true</b> if <paramref name="source"/> is between <paramref name="min"/> and <paramref name="max"/> (inclusive); otherwise, <b>false</b>.</returns>
+            <exception cref="T:System.ArgumentException"><paramref name="min"/> is not the same type as <paramref name="source"/>.
+            -or- <paramref name="max"/> is not the same type as <paramref name="source"/>.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="min"/> is greater than <paramref name="max"/>.</exception>
+        </member>
+        <member name="M:System.ComparableExtensions.IsBetween(System.IComparable,System.IComparable,System.Object)">
+            <summary>
+            Returns a value indicating whether <paramref name="source"/> is between <paramref name="min"/> and <paramref name="max"/> (inclusive).
+            </summary>
+            <param name="source">The source value.</param>
+            <param name="min">The minimum value being compared to <paramref name="source"/>.</param>
+            <param name="max">The maximum value being compared to <paramref name="source"/>.</param>
+            <returns><b>true</b> if <paramref name="source"/> is between <paramref name="min"/> and <paramref name="max"/> (inclusive); otherwise, <b>false</b>.</returns>
+            <exception cref="T:System.ArgumentException"><paramref name="min"/> is not the same type as <paramref name="source"/>.
+            -or- <paramref name="max"/> is not the same type as <paramref name="source"/>.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="min"/> is greater than <paramref name="max"/>.</exception>
+        </member>
+        <member name="T:System.ComparableTExtensions">
+            <summary>
+            Contains extension methods for the <see cref="T:System.IComparable`1"/> interface, to make it more fluent.
+            </summary>
+        </member>
+        <member name="M:System.ComparableTExtensions.IsEqualTo``1(System.IComparable{``0},``0)">
+            <summary>
+            Returns a value indicating whether <paramref name="source"/> is equal to <paramref name="other"/>.
+            </summary>
+            <typeparam name="T">The type of the objects being compared.</typeparam>
+            <param name="source">The source value.</param>
+            <param name="other">The other value being compared to <paramref name="source"/>.</param>
+            <returns><b>true</b> if <paramref name="source"/> is equal to <paramref name="other"/>; otherwise, <b>false</b>.</returns>
+        </member>
+        <member name="M:System.ComparableTExtensions.IsNotEqualTo``1(System.IComparable{``0},``0)">
+            <summary>
+            Returns a value indicating whether <paramref name="source"/> is not equal to <paramref name="other"/>.
+            </summary>
+            <typeparam name="T">The type of the objects being compared.</typeparam>
+            <param name="source">The source value.</param>
+            <param name="other">The other value being compared to <paramref name="source"/>.</param>
+            <returns><b>true</b> if <paramref name="source"/> is not equal to <paramref name="other"/>; otherwise, <b>false</b>.</returns>
+        </member>
+        <member name="M:System.ComparableTExtensions.IsLessThan``1(System.IComparable{``0},``0)">
+            <summary>
+            Returns a value indicating whether <paramref name="source"/> is less than <paramref name="other"/>.
+            </summary>
+            <typeparam name="T">The type of the objects being compared.</typeparam>
+            <param name="source">The source value.</param>
+            <param name="other">The other value being compared to <paramref name="source"/>.</param>
+            <returns><b>true</b> if <paramref name="source"/> is less than <paramref name="other"/>; otherwise, <b>false</b>.</returns>
+        </member>
+        <member name="M:System.ComparableTExtensions.IsLessThanOrEqualTo``1(System.IComparable{``0},``0)">
+            <summary>
+            Returns a value indicating whether <paramref name="source"/> is less than or equal to <paramref name="other"/>.
+            </summary>
+            <typeparam name="T">The type of the objects being compared.</typeparam>
+            <param name="source">The source value.</param>
+            <param name="other">The other value being compared to <paramref name="source"/>.</param>
+            <returns><b>true</b> if <paramref name="source"/> is less than or equal to <paramref name="other"/>; otherwise, <b>false</b>.</returns>
+        </member>
+        <member name="M:System.ComparableTExtensions.IsGreaterThan``1(System.IComparable{``0},``0)">
+            <summary>
+            Returns a value indicating whether <paramref name="source"/> is greater than <paramref name="other"/>.
+            </summary>
+            <typeparam name="T">The type of the objects being compared.</typeparam>
+            <param name="source">The source value.</param>
+            <param name="other">The other value being compared to <paramref name="source"/>.</param>
+            <returns><b>true</b> if <paramref name="source"/> is greater than <paramref name="other"/>; otherwise, <b>false</b>.</returns>
+        </member>
+        <member name="M:System.ComparableTExtensions.IsGreaterThanOrEqualTo``1(System.IComparable{``0},``0)">
+            <summary>
+            Returns a value indicating whether <paramref name="source"/> is greater than or equal to <paramref name="other"/>.
+            </summary>
+            <typeparam name="T">The type of the objects being compared.</typeparam>
+            <param name="source">The source value.</param>
+            <param name="other">The other value being compared to <paramref name="source"/>.</param>
+            <returns><b>true</b> if <paramref name="source"/> is greater than or equal to <paramref name="other"/>; otherwise, <b>false</b>.</returns>
+        </member>
+        <member name="M:System.ComparableTExtensions.IsBetween``1(System.IComparable{``0},``0,``0)">
+            <summary>
+            Returns a value indicating whether <paramref name="source"/> is between <paramref name="min"/> and <paramref name="max"/> (inclusive).
+            </summary>
+            <typeparam name="T">The type of the objects being compared.</typeparam>
+            <param name="source">The source value.</param>
+            <param name="min">The minimum value being compared to <paramref name="source"/>.</param>
+            <param name="max">The maximum value being compared to <paramref name="source"/>.</param>
+            <returns><b>true</b> if <paramref name="source"/> is between <paramref name="min"/> and <paramref name="max"/> (inclusive); otherwise, <b>false</b>.</returns>
+            -or- <paramref name="max"/> is not the same type as <paramref name="source"/>.
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="min"/> is greater than <paramref name="max"/>.</exception>
+        </member>
+        <member name="M:System.ComparableTExtensions.ConstrainToMin``1(``0,``0)">
+            <summary>
+            Returns the larger of either <paramref name="source"/> or <paramref name="min"/>.
+            </summary>
+            <typeparam name="T">The type of the objects being compared.</typeparam>
+            <param name="source">The source value.</param>
+            <param name="min">The minimum value being compared to <paramref name="source"/>.</param>
+            <returns><paramref name="min"/>, if <paramref name="source"/> is less than <paramref name="min"/>; otherwise, <paramref name="source"/>.</returns>
+        </member>
+        <member name="M:System.ComparableTExtensions.ConstrainToMax``1(``0,``0)">
+            <summary>
+            Returns the smaller of either <paramref name="source"/> or <paramref name="max"/>.
+            </summary>
+            <typeparam name="T">The type of the objects being compared.</typeparam>
+            <param name="source">The source value.</param>
+            <param name="max">The maximum value being compared to <paramref name="source"/>.</param>
+            <returns><paramref name="max"/>, if <paramref name="source"/> is greater than <paramref name="max"/>; otherwise, <paramref name="source"/>.</returns>
+        </member>
+        <member name="M:System.ComparableTExtensions.ConstrainTo``1(``0,``0,``0)">
+            <summary>
+            Gets the larger of either <paramref name="source"/> or <paramref name="min"/>
+            then returns the smaller of either that number or <paramref name="max"/>.
+            </summary>
+            <typeparam name="T">The type of the objects being compared.</typeparam>
+            <param name="source">The source value.</param>
+            <param name="min">The minimum value being compared to <paramref name="source"/>.</param>
+            <param name="max">The maximum value being compared to <paramref name="source"/>.</param>
+            <returns><paramref name="min"/> if <paramref name="source"/> is less than <paramref name="min"/>,
+            or <paramref name="max"/> if <paramref name="source"/> is greater than <paramref name="max"/>; otherwise, <paramref name="source"/>.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="min"/> is greater than <paramref name="max"/>.</exception>
+        </member>
+    </members>
+</doc>

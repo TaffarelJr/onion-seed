@@ -1,0 +1,38 @@
+# These rules are unnecessary for test code:
+
+[*.cs]
+# CodeAnalysis - Design Rules
+dotnet_diagnostic.CA1014.severity = none # Mark assemblies with CLSCompliant
+dotnet_diagnostic.CA1063.severity = none # Implement IDisposable Correctly
+
+# CodeAnalysis - Globalization rules
+dotnet_diagnostic.CA1303.severity = none # Do not pass literals as localized parameters
+dotnet_diagnostic.CA1305.severity = none # Specify IFormatProvider
+dotnet_diagnostic.CA1307.severity = none # Specify StringComparison for clarity
+dotnet_diagnostic.CA1308.severity = none # Normalize strings to uppercase
+
+# CodeAnalysis - Naming rules
+dotnet_diagnostic.CA1707.severity = none # Identifiers should not contain underscores
+
+# CodeAnalysis - Performance rules
+dotnet_diagnostic.CA1806.severity = none # Do not ignore method results
+dotnet_diagnostic.CA1816.severity = none # Dispose methods should call SuppressFinalize
+dotnet_diagnostic.CA1822.severity = none # Mark members as static
+
+# Compiler warnings
+dotnet_diagnostic.CS1591.severity = none # Missing XML comment for publicly visible type or member
+dotnet_diagnostic.CS3016.severity = none # Arrays as attribute arguments is not CLS-compliant
+dotnet_diagnostic.CS8002.severity = none # Referenced assembly does not have a strong name
+
+# Meziantou rules
+dotnet_diagnostic.MA0002.severity = none # IEqualityComparer<string> or IComparer<string> is missing
+dotnet_diagnostic.MA0011.severity = none # IFormatProvider is missing
+dotnet_diagnostic.MA0025.severity = none # Implement the functionality instead of throwing NotImplementedException
+dotnet_diagnostic.MA0051.severity = none # Method is too long
+dotnet_diagnostic.MA0075.severity = none # Do not use implicit culture-sensitive ToString
+dotnet_diagnostic.MA0076.severity = none # Do not use implicit culture-sensitive ToString in interpolated strings
+
+# StyleCop rules
+dotnet_diagnostic.SA0001.severity = none # XML comment analysis disabled
+dotnet_diagnostic.SA1124.severity = none # Do not use regions
+dotnet_diagnostic.SA1600.severity = none # Elements must be documented
