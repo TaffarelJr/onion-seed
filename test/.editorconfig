@@ -21,6 +21,7 @@ dotnet_diagnostic.CA1822.severity = none # Mark members as static
 
 # Compiler warnings
 dotnet_diagnostic.CS1591.severity = none # Missing XML comment for publicly visible type or member
+dotnet_diagnostic.CS3016.severity = none # Arrays as attribute arguments is not CLS-compliant
 dotnet_diagnostic.CS8002.severity = none # Referenced assembly does not have a strong name
 
 # Meziantou rules
