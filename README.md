@@ -18,6 +18,12 @@ View the [Wiki](https://github.com/TaffarelJr/onion-seed/wiki) for documentation
 | GitHub Release | [![GitHub release](https://img.shields.io/github/release/TaffarelJr/onion-seed?logo=github)](https://github.com/TaffarelJr/onion-seed/releases/latest) |
 | OnionSeed      | [![NuGet](https://img.shields.io/nuget/v/OnionSeed?logo=nuget)](https://www.nuget.org/packages/OnionSeed)                                              |
 
+## How to build the code
+
+This is just a standard Visual Studio solution. [OnionSeed.sln](./OnionSeed.sln) is just at the root of the repo.
+
+The unit test project compiles against each of the supported platforms; so you'll need to have the SDKs for each of them in order to compile fully. Most of them come with Visual Studio; and it should give you error messages explaining which ones you're missing, if any.
+
 ## Community
 
 This project is licensed under the standard [MIT license](./LICENSE).
