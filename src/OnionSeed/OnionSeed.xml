@@ -178,7 +178,7 @@
         </member>
         <member name="M:System.ComparableTExtensions.ConstrainTo``1(``0,``0,``0)">
             <summary>
-            Gets the larger of either <paramref name="source"/> or <paramref name="min"/>
+            Gets the larger of either <paramref name="source"/> or <paramref name="min"/>,
             then returns the smaller of either that number or <paramref name="max"/>.
             </summary>
             <typeparam name="T">The type of the objects being compared.</typeparam>

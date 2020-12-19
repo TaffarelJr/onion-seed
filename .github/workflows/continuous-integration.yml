@@ -1,0 +1,117 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches:
+      - "**"
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+          submodules: true
+
+      - name: Restore dependencies
+        run: dotnet restore --verbosity minimal
+
+      - name: Build source code
+        run: dotnet build --no-restore --configuration Debug --verbosity minimal
+
+      - name: Run unit tests
+        run: dotnet test .\test\OnionSeed.UnitTests --no-build --no-restore --configuration Debug --verbosity minimal /p:CollectCoverage=true /p:CoverletOutput=TestResults/ /p:CoverletOutputFormat=cobertura
+
+      - name: List code coverage reports
+        run: ls ./test/OnionSeed.UnitTests/TestResults
+
+      - name: Upload unit test code coverage for .NET Framework 4.5.2
+        uses: codecov/codecov-action@v1
+        with:
+          name: codecov-umbrella
+          file: ./test/OnionSeed.UnitTests/TestResults/coverage.net452.cobertura.xml
+          flags: unit,net452
+          fail_ci_if_error: false
+
+      - name: Upload unit test code coverage for .NET Framework 4.6
+        uses: codecov/codecov-action@v1
+        with:
+          name: codecov-umbrella
+          file: ./test/OnionSeed.UnitTests/TestResults/coverage.net46.cobertura.xml
+          flags: unit,net46
+          fail_ci_if_error: false
+
+      - name: Upload unit test code coverage for .NET Framework 4.6.1
+        uses: codecov/codecov-action@v1
+        with:
+          name: codecov-umbrella
+          file: ./test/OnionSeed.UnitTests/TestResults/coverage.net461.cobertura.xml
+          flags: unit,net461
+          fail_ci_if_error: false
+
+      - name: Upload unit test code coverage for .NET Framework 4.6.2
+        uses: codecov/codecov-action@v1
+        with:
+          name: codecov-umbrella
+          file: ./test/OnionSeed.UnitTests/TestResults/coverage.net462.cobertura.xml
+          flags: unit,net462
+          fail_ci_if_error: false
+
+      - name: Upload unit test code coverage for .NET Framework 4.7
+        uses: codecov/codecov-action@v1
+        with:
+          name: codecov-umbrella
+          file: ./test/OnionSeed.UnitTests/TestResults/coverage.net47.cobertura.xml
+          flags: unit,net47
+          fail_ci_if_error: false
+
+      - name: Upload unit test code coverage for .NET Framework 4.7.1
+        uses: codecov/codecov-action@v1
+        with:
+          name: codecov-umbrella
+          file: ./test/OnionSeed.UnitTests/TestResults/coverage.net471.cobertura.xml
+          flags: unit,net471
+          fail_ci_if_error: false
+
+      - name: Upload unit test code coverage for .NET Framework 4.7.2
+        uses: codecov/codecov-action@v1
+        with:
+          name: codecov-umbrella
+          file: ./test/OnionSeed.UnitTests/TestResults/coverage.net472.cobertura.xml
+          flags: unit,net472
+          fail_ci_if_error: false
+
+      - name: Upload unit test code coverage for .NET Framework 4.8
+        uses: codecov/codecov-action@v1
+        with:
+          name: codecov-umbrella
+          file: ./test/OnionSeed.UnitTests/TestResults/coverage.net48.cobertura.xml
+          flags: unit,net48
+          fail_ci_if_error: false
+
+      - name: Upload unit test code coverage for .NET Core 2.1
+        uses: codecov/codecov-action@v1
+        with:
+          name: codecov-umbrella
+          file: ./test/OnionSeed.UnitTests/TestResults/coverage.netcoreapp2.1.cobertura.xml
+          flags: unit,netcoreapp2.1
+          fail_ci_if_error: false
+
+      - name: Upload unit test code coverage for .NET Core 3.1
+        uses: codecov/codecov-action@v1
+        with:
+          name: codecov-umbrella
+          file: ./test/OnionSeed.UnitTests/TestResults/coverage.netcoreapp3.1.cobertura.xml
+          flags: unit,netcoreapp3.1
+          fail_ci_if_error: false
+
+      - name: Upload unit test code coverage for .NET 5.0
+        uses: codecov/codecov-action@v1
+        with:
+          name: codecov-umbrella
+          file: ./test/OnionSeed.UnitTests/TestResults/coverage.net5.0.cobertura.xml
+          flags: unit,net5.0
+          fail_ci_if_error: false

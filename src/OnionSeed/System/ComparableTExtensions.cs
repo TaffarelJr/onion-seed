@@ -110,7 +110,7 @@ namespace System
             where T : IComparable<T> => source.IsGreaterThan(max) ? max : source;
 
         /// <summary>
-        /// Gets the larger of either <paramref name="source"/> or <paramref name="min"/>
+        /// Gets the larger of either <paramref name="source"/> or <paramref name="min"/>,
         /// then returns the smaller of either that number or <paramref name="max"/>.
         /// </summary>
         /// <typeparam name="T">The type of the objects being compared.</typeparam>
