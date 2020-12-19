@@ -8,7 +8,7 @@ The OnionSeed project is currently supported on any version of .NET currently su
 
 | Platforms</br>Currently Supported | End of Support   | .NET Standard</br>1.2 | .NET Standard</br>1.3 | .NET Standard</br>1.4 | .NET Standard</br>1.5 | .NET Standard</br>1.6 | .NET Standard</br>2.0 | .NET Standard</br>2.1 |
 | --------------------------------- | ---------------- | :-------------------: | :-------------------: | :-------------------: | :-------------------: | :-------------------: | :-------------------: | :-------------------: |
-| .NET 5                            |                  |          ✔️           |          ✔️           |          ✔️           |          ✔️           |          ✔️           |          ✔️           |          ✔️           |
+| .NET 5.0                          |                  |          ✔️           |          ✔️           |          ✔️           |          ✔️           |          ✔️           |          ✔️           |          ✔️           |
 | .NET Core 3.1                     | December 3, 2022 |          ✔️           |          ✔️           |          ✔️           |          ✔️           |          ✔️           |          ✔️           |          ✔️           |
 | .NET Core 2.1                     | August 21, 2021  |          ✔️           |          ✔️           |          ✔️           |          ✔️           |          ✔️           |          ✔️           |          ✔️           |
 | .NET Framework 4.8                | \<see below †\>  |          ✔️           |          ✔️           |          ✔️           |          ✔️           |          ✔️           |          ✔️           |          N/A          |
