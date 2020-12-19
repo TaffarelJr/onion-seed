@@ -217,6 +217,26 @@ namespace System
         }
 
         [Theory]
+        [InlineData(true, true)]
+        [InlineData(true, false)]
+        [InlineData(false, true)]
+        public void IsBetween_ShouldThrowException_WhenMinIsObject_AndRangeContainsUncomparableType(bool wrongMin, bool wrongMax)
+        {
+            // Arrange
+            // These exceptions are not thrown; we simply need to test with a wrong type that is not IComparable
+            var min = wrongMin ? (object)new InvalidOperationException() : 4;
+            var max = wrongMax ? (object)new InvalidOperationException() : 8;
+
+            IComparable subject = 1;
+
+            // Act
+            Action action = () => subject.IsBetween(min, max);
+
+            // Assert
+            action.Should().Throw<ArgumentException>();
+        }
+
+        [Theory]
         [InlineData(0, null)]
         [InlineData(2, 1)]
         public void IsBetween_ShouldThrowException_WhenMinIsObject_AndMinIsGreaterThanMax(int? min, int? max)
