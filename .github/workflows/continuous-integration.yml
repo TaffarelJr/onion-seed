@@ -25,9 +25,6 @@ jobs:
       - name: Run unit tests
         run: dotnet test .\test\OnionSeed.UnitTests --no-build --no-restore --configuration Debug --verbosity minimal /p:CollectCoverage=true /p:CoverletOutput=TestResults/ /p:CoverletOutputFormat=cobertura
 
-      - name: List code coverage reports
-        run: ls ./test/OnionSeed.UnitTests/TestResults
-
       - name: Upload unit test code coverage for .NET Framework 4.5.2
         uses: codecov/codecov-action@v1
         with:
