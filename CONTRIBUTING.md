@@ -14,6 +14,6 @@ That should just about cover it, right? Please review the official [Code of Cond
 
 ## How to contribute
 
-This is a GitHub project. Feel free to make use of the new Discussions tab for conversations about best practices, ideas, help, requests, etc.
+This is a GitHub project. Feel free to make use of the new [Discussions](https://github.com/TaffarelJr/onion-seed/discussions) area for conversations about best practices, ideas, help, requests, etc.
 
-Also feel free to submit Issues and Pull Requests. It's pretty laid back around here.
+Also feel free to submit [Issues](https://github.com/TaffarelJr/onion-seed/issues) and [Pull Requests](https://github.com/TaffarelJr/onion-seed/pulls). It's pretty laid back around here.

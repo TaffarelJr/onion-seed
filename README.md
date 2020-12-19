@@ -2,6 +2,8 @@
 
 Contains common components, utilities, and scaffolding to enable applications to be created more quickly, following the tenets of DDD and Onion Architecture.
 
+View the [Wiki](https://github.com/TaffarelJr/onion-seed/wiki) for documentation about specific APIs included in this project.
+
 ## Community
 
 This project is licensed under the standard [MIT license](./LICENSE).

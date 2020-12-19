@@ -1,6 +1,6 @@
 # Support
 
-These libraries and components are simply a collection of handy things I've created, so I don't have to create them again. Please feel free to review the Wiki pages, make full use of the Discussions tab, and submit Issues and Pull Requests. I will reply as quickly as I can.
+These libraries and components are simply a collection of handy things I've created, so I don't have to create them again. Please feel free to review the [Wiki](https://github.com/TaffarelJr/onion-seed/wiki) pages, make full use of the [Discussions](https://github.com/TaffarelJr/onion-seed/discussions) area, and submit [Issues](https://github.com/TaffarelJr/onion-seed/issues) and [Pull Requests](https://github.com/TaffarelJr/onion-seed/pulls). I will reply as quickly as I can.
 
 ## Supported Platforms
 
