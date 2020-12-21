@@ -1,9 +1,5 @@
 # OnionSeed
 
-Contains common components, utilities, and scaffolding to enable applications to be created more quickly, following the tenets of DDD and Onion Architecture.
-
-View the [Wiki](https://github.com/TaffarelJr/onion-seed/wiki) for documentation about specific APIs included in this project.
-
 [![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2FTaffarelJr%2Fonion-seed)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2FTaffarelJr%2Fonion-seed)
 [![GitHub license](https://img.shields.io/github/license/TaffarelJr/onion-seed?logo=github)](https://github.com/TaffarelJr/onion-seed/blob/main/LICENSE)
 
@@ -17,6 +13,15 @@ View the [Wiki](https://github.com/TaffarelJr/onion-seed/wiki) for documentation
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | GitHub Release | [![GitHub release](https://img.shields.io/github/release/TaffarelJr/onion-seed?logo=github)](https://github.com/TaffarelJr/onion-seed/releases/latest) |
 | OnionSeed      | [![NuGet](https://img.shields.io/nuget/v/OnionSeed?logo=nuget)](https://www.nuget.org/packages/OnionSeed)                                              |
+
+## Summary
+
+This project contains common components, utilities, and scaffolding to enable applications to be created more quickly, following the tenets of SOLID, DDD, and Onion Architecture.
+
+There is a great introductory article to the principles this project is intended to embody, archived [here](./docs/ExplicitArchitecture/Article.md).
+![Explicit Architecture](./docs/ExplicitArchitecture/100-explicit-architecture.png)
+
+View the [Wiki](https://github.com/TaffarelJr/onion-seed/wiki) for documentation about specific APIs included in this project.
 
 ## How to build the code
 
