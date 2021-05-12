@@ -29,7 +29,7 @@ jobs:
         run: ls ./test/OnionSeed.UnitTests/TestResults
 
       - name: Upload unit test code coverage for .NET Framework 4.5.2
-        uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@v1.5.0
         with:
           name: codecov-umbrella
           file: ./test/OnionSeed.UnitTests/TestResults/coverage.net452.cobertura.xml
@@ -37,7 +37,7 @@ jobs:
           fail_ci_if_error: false
 
       - name: Upload unit test code coverage for .NET Framework 4.6
-        uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@v1.5.0
         with:
           name: codecov-umbrella
           file: ./test/OnionSeed.UnitTests/TestResults/coverage.net46.cobertura.xml
@@ -45,7 +45,7 @@ jobs:
           fail_ci_if_error: false
 
       - name: Upload unit test code coverage for .NET Framework 4.6.1
-        uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@v1.5.0
         with:
           name: codecov-umbrella
           file: ./test/OnionSeed.UnitTests/TestResults/coverage.net461.cobertura.xml
@@ -53,7 +53,7 @@ jobs:
           fail_ci_if_error: false
 
       - name: Upload unit test code coverage for .NET Framework 4.6.2
-        uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@v1.5.0
         with:
           name: codecov-umbrella
           file: ./test/OnionSeed.UnitTests/TestResults/coverage.net462.cobertura.xml
@@ -61,7 +61,7 @@ jobs:
           fail_ci_if_error: false
 
       - name: Upload unit test code coverage for .NET Framework 4.7
-        uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@v1.5.0
         with:
           name: codecov-umbrella
           file: ./test/OnionSeed.UnitTests/TestResults/coverage.net47.cobertura.xml
@@ -69,7 +69,7 @@ jobs:
           fail_ci_if_error: false
 
       - name: Upload unit test code coverage for .NET Framework 4.7.1
-        uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@v1.5.0
         with:
           name: codecov-umbrella
           file: ./test/OnionSeed.UnitTests/TestResults/coverage.net471.cobertura.xml
@@ -77,7 +77,7 @@ jobs:
           fail_ci_if_error: false
 
       - name: Upload unit test code coverage for .NET Framework 4.7.2
-        uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@v1.5.0
         with:
           name: codecov-umbrella
           file: ./test/OnionSeed.UnitTests/TestResults/coverage.net472.cobertura.xml
@@ -85,7 +85,7 @@ jobs:
           fail_ci_if_error: false
 
       - name: Upload unit test code coverage for .NET Framework 4.8
-        uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@v1.5.0
         with:
           name: codecov-umbrella
           file: ./test/OnionSeed.UnitTests/TestResults/coverage.net48.cobertura.xml
@@ -93,7 +93,7 @@ jobs:
           fail_ci_if_error: false
 
       - name: Upload unit test code coverage for .NET Core 2.1
-        uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@v1.5.0
         with:
           name: codecov-umbrella
           file: ./test/OnionSeed.UnitTests/TestResults/coverage.netcoreapp2.1.cobertura.xml
@@ -101,7 +101,7 @@ jobs:
           fail_ci_if_error: false
 
       - name: Upload unit test code coverage for .NET Core 3.1
-        uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@v1.5.0
         with:
           name: codecov-umbrella
           file: ./test/OnionSeed.UnitTests/TestResults/coverage.netcoreapp3.1.cobertura.xml
@@ -109,7 +109,7 @@ jobs:
           fail_ci_if_error: false
 
       - name: Upload unit test code coverage for .NET 5.0
-        uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@v1.5.0
         with:
           name: codecov-umbrella
           file: ./test/OnionSeed.UnitTests/TestResults/coverage.net5.0.cobertura.xml
