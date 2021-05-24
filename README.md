@@ -25,9 +25,9 @@ View the [Wiki](https://github.com/TaffarelJr/onion-seed/wiki) for documentation
 
 ## How to build the code
 
-This is just a standard Visual Studio solution. [OnionSeed.sln](./OnionSeed.sln) is just at the root of the repo.
+This is just a standard Visual Studio solution. [OnionSeed.sln](./OnionSeed.sln) is at the root of the repo - simply open it and build.
 
-The unit test project compiles against each of the supported platforms; so you'll need to have the SDKs for each of them in order to compile fully. Most of them come with Visual Studio; and it should give you error messages explaining which ones you're missing, if any.
+The unit test project uses multi-targeting to compile against each of the supported platforms; so you'll need to have the SDKs installed for each of them in order to compile fully. Most of them come with Visual Studio; and it should give you error messages explaining which ones you're missing, if any.
 
 ## Community
 
