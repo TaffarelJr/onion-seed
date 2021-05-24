@@ -85,8 +85,11 @@ namespace System
             if (min is null)
                 return source.IsLessThanOrEqualTo(max);
 
+            // TODO: Remove this, once CA1508 stops giving a false positive.
+#pragma warning disable CA1508 // Avoid dead conditional code
             if (!(min is IComparable comparableMin))
                 throw new ArgumentException("The min value cannot be compared to the max value.", nameof(min));
+#pragma warning restore CA1508 // Avoid dead conditional code
 
             return source.IsBetween(comparableMin, max);
         }

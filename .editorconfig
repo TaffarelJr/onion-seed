@@ -1,4 +1,4 @@
-﻿# EditorConfig: https://EditorConfig.org
+# EditorConfig: https://EditorConfig.org
 # Remove the line below if you want to inherit .editorconfig settings from higher directories
 root = true
 
@@ -208,6 +208,9 @@ dotnet_naming_style.begins_with_i.required_prefix = I
 dotnet_naming_style.begins_with_i.required_suffix =
 dotnet_naming_style.begins_with_i.word_separator =
 dotnet_naming_style.begins_with_i.capitalization = pascal_case
+
+# Meziantou Analyzer rules
+dotnet_diagnostic.MA0026.severity = suggestion # MA0026: Fix TODO comment
 
 # StyleCop rules
 dotnet_diagnostic.SA1101.severity = none # Prefix local calls with 'this'
