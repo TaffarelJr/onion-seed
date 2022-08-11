@@ -16,7 +16,7 @@
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
         <PackageReference Include="FluentAssertions" Version="5.10.*" />
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.*" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.*" />
         <PackageReference Include="Microsoft.TestPlatform.ObjectModel" Version="16.9.*" />
         <PackageReference Include="Moq" Version="4.16.*" />
         <PackageReference Include="xunit" Version="2.4.*" />
