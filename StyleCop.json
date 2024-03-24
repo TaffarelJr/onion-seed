@@ -3,7 +3,7 @@
   "settings": {
     "documentationRules": {
       "companyName": "RJ Hollberg",
-      "copyrightText": "Copyright (c) {companyName}. All rights reserved.\nLicensed under the {licenseName} license. See {licenseFile} file in the project root for full license information.",
+      "copyrightText": "Copyright (c) {companyName}. All rights reserved, {licenseName} license. See {licenseFile} in the project root for full information.",
       "documentationCulture": "en-US",
       "documentInternalElements": false,
       "variables": {
