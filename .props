@@ -9,6 +9,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <PropertyGroup Label="Feature Polyfill settings">
+    <PolySharpUsePublicAccessibilityForGeneratedTypes>True</PolySharpUsePublicAccessibilityForGeneratedTypes>
+  </PropertyGroup>
+
   <PropertyGroup Label="Code Analysis settings">
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
@@ -83,10 +87,18 @@
   │ Standard dependencies for all projects
   └───────────────────────────────────────────────────────────────────────── -->
 
+  <!-- These references make newer features available on older platforms.
+  Recommend using wildcards for patch version numbers, to reduce churn.
+  Recommend using latest versions. -->
+  <ItemGroup Label="Feature Polyfill">
+    <PackageReference Include="Microsoft.Bcl.HashCode" Version="1.1.*" Condition="!$(DefineConstants.Contains('CSHARP8'))" />
+    <PackageReference Include="PolySharp" Version="1.13.*" PrivateAssets="all" />
+  </ItemGroup>
+
   <!-- These are only referenced during development, so `PrivateAssets="all"`.
   Recommend using wildcards for patch version numbers, to reduce churn.
   Recommend using latest versions. -->
-  <ItemGroup Label="Development">
+  <ItemGroup Label="Code Analyzers">
     <PackageReference Include="Meziantou.Analyzer" Version="1.0.*" PrivateAssets="all" />
     <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="5.0.*" PrivateAssets="all" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.2.*-*" PrivateAssets="all" />
