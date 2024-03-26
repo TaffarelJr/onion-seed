@@ -14,6 +14,70 @@
   </PropertyGroup>
 
   <!-- ─────────────────────────────────────────────────────────────────────────
+  │ Platform-specific settings for all projects
+  │
+  │ These settings are intended to be used for
+  │ enabling or disabling features based on target platform.
+  └───────────────────────────────────────────────────────────────────────── -->
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='net462'">
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='net47'">
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='net471'">
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='net472'">
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='net48'">
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='net481'">
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.1'">
+    <LangVersion>9.0</LangVersion>
+    <DefineConstants>$(DefineConstants);CSHARP8</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp3.1'">
+    <LangVersion>9.0</LangVersion>
+    <DefineConstants>$(DefineConstants);CSHARP8</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='net5.0'">
+    <DefineConstants>$(DefineConstants);CSHARP8;CSHARP9</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='net6.0'">
+    <DefineConstants>$(DefineConstants);CSHARP8;CSHARP9;CSHARP10</DefineConstants>
+    <ImplicitUsings>disable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='net7.0'">
+    <DefineConstants>$(DefineConstants);CSHARP8;CSHARP9;CSHARP10;CSHARP11</DefineConstants>
+    <ImplicitUsings>disable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='net8.0'">
+    <DefineConstants>$(DefineConstants);CSHARP8;CSHARP9;CSHARP10;CSHARP11;CSHARP12</DefineConstants>
+    <ImplicitUsings>disable</ImplicitUsings>
+  </PropertyGroup>
+
+  <!-- ─────────────────────────────────────────────────────────────────────────
   │ Standard dependencies for all projects
   └───────────────────────────────────────────────────────────────────────── -->
 
