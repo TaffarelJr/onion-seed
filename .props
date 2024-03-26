@@ -6,11 +6,13 @@
 
   <PropertyGroup Label="Build settings">
     <Features>IOperation</Features>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <PropertyGroup Label="Code Analysis settings">
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
-    <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+    <AnalysisLevel>latest-all</AnalysisLevel>
   </PropertyGroup>
 
   <!-- ─────────────────────────────────────────────────────────────────────────
