@@ -1,14 +1,29 @@
 <Project>
 
-    <PropertyGroup>
-        <DocumentationFile>$(AssemblyName).xml</DocumentationFile>
-        <Authors>RJ Hollberg</Authors>
-        <Company>RJ Hollberg</Company>
-        <Copyright>Copyright © $([System.DateTime]::Now.Year) RJ Hollberg</Copyright>
-        <RepositoryType>git</RepositoryType>
-        <IsPackable>true</IsPackable>
-    </PropertyGroup>
+  <!-- ─────────────────────────────────────────────────────────────────────────
+  │ Standard settings for production projects
+  └───────────────────────────────────────────────────────────────────────── -->
 
-    <Import Project="..\.props" />
+  <PropertyGroup Label="Build settings">
+    <DocumentationFile>$(AssemblyName).xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Label="NuGet package settings">
+    <IsPackable>true</IsPackable>
+    <Authors>RJ Hollberg</Authors>
+    <Company>RJ Hollberg</Company>
+    <Copyright>Copyright © $([System.DateTime]::Now.Year) RJ Hollberg</Copyright>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <!-- ─────────────────────────────────────────────────────────────────────────
+  │ Import shared settings
+  │
+  │ These settings might contain PropertyGroups and/or ItemGroups;
+  │ and the former must come before the latter. Therefore,
+  │ the import must happen here so it can span both categories.
+  └───────────────────────────────────────────────────────────────────────── -->
+
+  <Import Project="$(SolutionDir)\.props" />
 
 </Project>

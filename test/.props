@@ -1,41 +1,52 @@
 <Project>
 
-    <PropertyGroup>
-        <IsPackable>false</IsPackable>
-    </PropertyGroup>
+  <!-- ─────────────────────────────────────────────────────────────────────────
+  │ Standard settings for test projects
+  └───────────────────────────────────────────────────────────────────────── -->
 
-    <Import Project="..\.props" />
+  <PropertyGroup Label="NuGet package settings">
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
 
-    <ItemGroup>
-        <PackageReference Include="coverlet.collector" Version="3.0.*">
-            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-            <PrivateAssets>all</PrivateAssets>
-        </PackageReference>
-        <PackageReference Include="coverlet.msbuild" Version="3.0.*">
-            <PrivateAssets>all</PrivateAssets>
-            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-        </PackageReference>
-        <PackageReference Include="FluentAssertions" Version="5.10.*" />
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.*" />
-        <PackageReference Include="Microsoft.TestPlatform.ObjectModel" Version="16.9.*" />
-        <PackageReference Include="Moq" Version="4.16.*" />
-        <PackageReference Include="xunit" Version="2.4.*" />
-        <PackageReference Include="xunit.runner.console" Version="2.4.*">
-            <PrivateAssets>all</PrivateAssets>
-            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-        </PackageReference>
-        <PackageReference Include="xunit.runner.visualstudio" Version="2.4.*">
-            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-            <PrivateAssets>all</PrivateAssets>
-        </PackageReference>
-    </ItemGroup>
+  <!-- ─────────────────────────────────────────────────────────────────────────
+  │ Import shared settings
+  │
+  │ These settings might contain PropertyGroups and/or ItemGroups;
+  │ and the former must come before the latter. Therefore,
+  │ the import must happen here so it can span both categories.
+  └───────────────────────────────────────────────────────────────────────── -->
 
-    <ItemGroup>
-        <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.*" />
-    </ItemGroup>
+  <Import Project="$(SolutionDir)\.props" />
 
-    <ItemGroup>
-        <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
-    </ItemGroup>
+  <!-- ─────────────────────────────────────────────────────────────────────────
+  │ Standard dependencies for test projects
+  └───────────────────────────────────────────────────────────────────────── -->
+
+  <!-- These make up the testing platform.
+  Recommend using wildcards for patch version numbers, to reduce churn.
+  Recommend using latest versions. -->
+  <ItemGroup Label="Test platform">
+    <PackageReference Include="coverlet.collector" Version="3.0.*" />
+    <PackageReference Include="coverlet.msbuild" Version="3.0.*" />
+    <PackageReference Include="FluentAssertions" Version="5.10.*" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.*" />
+    <PackageReference Include="Microsoft.TestPlatform.ObjectModel" Version="16.9.*" />
+    <PackageReference Include="Moq" Version="4.16.*" />
+    <PackageReference Include="xunit" Version="2.4.*" />
+    <PackageReference Include="xunit.runner.console" Version="2.4.*" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.*" />
+  </ItemGroup>
+
+  <!-- ─────────────────────────────────────────────────────────────────────────
+  │ Additional services for test projects
+  └───────────────────────────────────────────────────────────────────────── -->
+
+  <ItemGroup Label="T4 Text Template engine">
+    <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
+  </ItemGroup>
 
 </Project>
