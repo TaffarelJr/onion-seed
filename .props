@@ -4,16 +4,16 @@
   │ Standard settings for all projects
   └───────────────────────────────────────────────────────────────────────── -->
 
-  <PropertyGroup Label="Build settings">
+  <PropertyGroup Label="Build">
     <Features>IOperation</Features>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <PropertyGroup Label="Feature Polyfill settings">
+  <PropertyGroup Label="Feature Polyfill">
     <PolySharpUsePublicAccessibilityForGeneratedTypes>True</PolySharpUsePublicAccessibilityForGeneratedTypes>
   </PropertyGroup>
 
-  <PropertyGroup Label="Code Analysis settings">
+  <PropertyGroup Label="Code Analysis">
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
     <AnalysisLevel>latest-all</AnalysisLevel>
@@ -98,7 +98,7 @@
   <!-- These are only referenced during development, so `PrivateAssets="all"`.
   Recommend using wildcards for patch version numbers, to reduce churn.
   Recommend using latest versions. -->
-  <ItemGroup Label="Code Analyzers">
+  <ItemGroup Label="Code Analysis">
     <PackageReference Include="Meziantou.Analyzer" Version="1.0.*" PrivateAssets="all" />
     <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="5.0.*" PrivateAssets="all" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.2.*-*" PrivateAssets="all" />
