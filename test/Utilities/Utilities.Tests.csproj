@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- ─────────────────────────────────────────────────────────────────────────
+  │ Settings
+  └───────────────────────────────────────────────────────────────────────── -->
+
+  <PropertyGroup Label="Build">
+    <TargetFrameworks>net462;net47;net471;net472;net48;net481;net6.0;net7.0;net8.0</TargetFrameworks>
+    <AssemblyName>OnionSeed.Utilities.Tests</AssemblyName>
+    <RootNamespace>OnionSeed.Utilities</RootNamespace>
+  </PropertyGroup>
+
+  <!-- ─────────────────────────────────────────────────────────────────────────
+  │ Import shared settings
+  │
+  │ These settings might contain PropertyGroups and/or ItemGroups;
+  │ and the former must come before the latter. Therefore,
+  │ the import must happen here so it can span both categories.
+  └───────────────────────────────────────────────────────────────────────── -->
+
+  <Import Project="$(SolutionDir)\test\.props" />
+
+  <!-- ─────────────────────────────────────────────────────────────────────────
+  │ Dependencies
+  └───────────────────────────────────────────────────────────────────────── -->
+
+  <ItemGroup Label="Project References">
+    <ProjectReference Include="$(SolutionDir)\src\TestUtilities\TestUtilities.csproj" />
+  </ItemGroup>
+
+</Project>
