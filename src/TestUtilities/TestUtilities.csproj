@@ -25,6 +25,12 @@
   │ Dependencies
   └───────────────────────────────────────────────────────────────────────── -->
 
+  <!-- Keep these to a minimum, as they'll be forced on ALL consumers of this package.
+  Recommend using latest versions. -->
+  <ItemGroup Label="3rd-Party">
+    <PackageReference Include="FluentDateTime" Version="3.0.0" />
+  </ItemGroup>
+
   <ItemGroup Label="Project References">
     <ProjectReference Include="$(SolutionDir)\src\Utilities\Utilities.csproj" />
   </ItemGroup>
