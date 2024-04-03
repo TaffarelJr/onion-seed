@@ -25,8 +25,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5CD628AE-70F
 		src\.props = src\.props
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnionSeed", "src\OnionSeed\OnionSeed.csproj", "{A39AED77-82DC-40D9-82DC-A5F84FB6BF34}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utilities", "src\Utilities\Utilities.csproj", "{71EA8A72-6CE7-4E66-8F92-56F500DB26C6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestUtilities", "src\TestUtilities\TestUtilities.csproj", "{7F730850-2E08-4FD0-9C8B-88D3A2CC4CD3}"
@@ -36,8 +34,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{7CE5AA7A-E
 		test\.editorconfig = test\.editorconfig
 		test\.props = test\.props
 	EndProjectSection
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnionSeed.UnitTests", "test\OnionSeed.UnitTests\OnionSeed.UnitTests.csproj", "{4B4E322E-ABF1-4798-B2F3-5B75BF67FA64}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utilities.Tests", "test\Utilities\Utilities.Tests.csproj", "{8A0686DA-7686-4AE5-9F31-8D5B66EBCAE1}"
 EndProject
@@ -49,10 +45,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A39AED77-82DC-40D9-82DC-A5F84FB6BF34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A39AED77-82DC-40D9-82DC-A5F84FB6BF34}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A39AED77-82DC-40D9-82DC-A5F84FB6BF34}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A39AED77-82DC-40D9-82DC-A5F84FB6BF34}.Release|Any CPU.Build.0 = Release|Any CPU
 		{71EA8A72-6CE7-4E66-8F92-56F500DB26C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{71EA8A72-6CE7-4E66-8F92-56F500DB26C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71EA8A72-6CE7-4E66-8F92-56F500DB26C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -61,10 +53,6 @@ Global
 		{7F730850-2E08-4FD0-9C8B-88D3A2CC4CD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F730850-2E08-4FD0-9C8B-88D3A2CC4CD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F730850-2E08-4FD0-9C8B-88D3A2CC4CD3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4B4E322E-ABF1-4798-B2F3-5B75BF67FA64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4B4E322E-ABF1-4798-B2F3-5B75BF67FA64}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4B4E322E-ABF1-4798-B2F3-5B75BF67FA64}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4B4E322E-ABF1-4798-B2F3-5B75BF67FA64}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8A0686DA-7686-4AE5-9F31-8D5B66EBCAE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8A0686DA-7686-4AE5-9F31-8D5B66EBCAE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A0686DA-7686-4AE5-9F31-8D5B66EBCAE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -78,10 +66,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{A39AED77-82DC-40D9-82DC-A5F84FB6BF34} = {5CD628AE-70FF-43A3-B93C-970B10A0E453}
 		{71EA8A72-6CE7-4E66-8F92-56F500DB26C6} = {5CD628AE-70FF-43A3-B93C-970B10A0E453}
 		{7F730850-2E08-4FD0-9C8B-88D3A2CC4CD3} = {5CD628AE-70FF-43A3-B93C-970B10A0E453}
-		{4B4E322E-ABF1-4798-B2F3-5B75BF67FA64} = {7CE5AA7A-E44B-4790-B310-EB1F2B446179}
 		{8A0686DA-7686-4AE5-9F31-8D5B66EBCAE1} = {7CE5AA7A-E44B-4790-B310-EB1F2B446179}
 		{DC33CD9F-BB70-4ECE-9FA4-20236D09E3F2} = {7CE5AA7A-E44B-4790-B310-EB1F2B446179}
 	EndGlobalSection
