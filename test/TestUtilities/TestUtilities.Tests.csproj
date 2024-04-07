@@ -20,12 +20,4 @@
 
   <Import Project="$(SolutionDir)\test\.props" />
 
-  <!-- ─────────────────────────────────────────────────────────────────────────
-  │ Dependencies
-  └───────────────────────────────────────────────────────────────────────── -->
-
-  <ItemGroup Label="Project References">
-    <ProjectReference Include="$(SolutionDir)\src\TestUtilities\TestUtilities.csproj" />
-  </ItemGroup>
-
 </Project>

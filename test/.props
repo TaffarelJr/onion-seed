@@ -41,6 +41,10 @@
     <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.*" />
   </ItemGroup>
 
+  <ItemGroup Label="Project References">
+    <ProjectReference Include="$(SolutionDir)\src\TestUtilities\TestUtilities.csproj" />
+  </ItemGroup>
+
   <!-- ─────────────────────────────────────────────────────────────────────────
   │ Additional services for test projects
   └───────────────────────────────────────────────────────────────────────── -->
