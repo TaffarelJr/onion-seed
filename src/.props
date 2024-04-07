@@ -47,7 +47,7 @@
   Recommend using wildcards for patch version numbers, to reduce churn.
   Recommend using latest versions. -->
   <ItemGroup Label="NuGet Package">
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.*" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.*" PrivateAssets="all" />
   </ItemGroup>
 
   <!-- ─────────────────────────────────────────────────────────────────────────

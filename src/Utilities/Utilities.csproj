@@ -28,7 +28,7 @@
   <!-- Keep these to a minimum, as they'll be forced on ALL consumers of this package.
   Recommend using latest versions. -->
   <ItemGroup Label="3rd-Party">
-    <PackageReference Include="morelinq" Version="3.4.2" />
+    <PackageReference Include="morelinq" Version="4.2.0" />
     <PackageReference Include="System.Linq.Async" Version="6.0.1" />
   </ItemGroup>
 

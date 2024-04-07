@@ -92,15 +92,15 @@
   Recommend using latest versions. -->
   <ItemGroup Label="Feature Polyfill">
     <PackageReference Include="Microsoft.Bcl.HashCode" Version="1.1.*" Condition="!$(DefineConstants.Contains('CSHARP8'))" />
-    <PackageReference Include="PolySharp" Version="1.13.*" PrivateAssets="all" />
+    <PackageReference Include="PolySharp" Version="1.14.*" PrivateAssets="all" />
   </ItemGroup>
 
   <!-- These are only referenced during development, so `PrivateAssets="all"`.
   Recommend using wildcards for patch version numbers, to reduce churn.
   Recommend using latest versions. -->
   <ItemGroup Label="Code Analysis">
-    <PackageReference Include="Meziantou.Analyzer" Version="1.0.*" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="5.0.*" PrivateAssets="all" />
+    <PackageReference Include="Meziantou.Analyzer" Version="2.0.*" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="8.0.*" PrivateAssets="all" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.2.*-*" PrivateAssets="all" />
   </ItemGroup>
 
