@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- ─────────────────────────────────────────────────────────────────────────
+  │ Settings
+  └───────────────────────────────────────────────────────────────────────── -->
+
+  <PropertyGroup Label="Build">
+    <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net7.0;net8.0</TargetFrameworks>
+    <AssemblyName>OnionSeed.Utilities</AssemblyName>
+    <RootNamespace>OnionSeed.Utilities</RootNamespace>
+    <Description>Contains core utilities for general use.</Description>
+  </PropertyGroup>
+
+  <!-- ─────────────────────────────────────────────────────────────────────────
+  │ Import shared settings
+  │
+  │ These settings might contain PropertyGroups and/or ItemGroups;
+  │ and the former must come before the latter. Therefore,
+  │ the import must happen here so it can span both categories.
+  └───────────────────────────────────────────────────────────────────────── -->
+
+  <Import Project="$(SolutionDir)\src\.props" />
+
+  <!-- ─────────────────────────────────────────────────────────────────────────
+  │ Dependencies
+  └───────────────────────────────────────────────────────────────────────── -->
+
+  <!-- Keep these to a minimum, as they'll be forced on ALL consumers of this package.
+  Recommend using latest versions. -->
+  <ItemGroup Label="3rd-Party">
+    <PackageReference Include="morelinq" Version="4.2.0" />
+    <PackageReference Include="System.Linq.Async" Version="6.0.1" />
+  </ItemGroup>
+
+</Project>

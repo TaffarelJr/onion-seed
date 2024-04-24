@@ -1,14 +1,62 @@
 <Project>
 
-    <PropertyGroup>
-        <DocumentationFile>$(AssemblyName).xml</DocumentationFile>
-        <Authors>RJ Hollberg</Authors>
-        <Company>RJ Hollberg</Company>
-        <Copyright>Copyright © $([System.DateTime]::Now.Year) RJ Hollberg</Copyright>
-        <RepositoryType>git</RepositoryType>
-        <IsPackable>true</IsPackable>
-    </PropertyGroup>
+  <!-- ─────────────────────────────────────────────────────────────────────────
+  │ Standard settings for production projects
+  └───────────────────────────────────────────────────────────────────────── -->
 
-    <Import Project="..\.props" />
+  <PropertyGroup Label="Build">
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+  </PropertyGroup>
+
+  <PropertyGroup Label="NuGet Package">
+    <IsPackable>true</IsPackable>
+    <Authors>RJ Hollberg</Authors>
+    <Company>RJ Hollberg</Company>
+    <Copyright>Copyright © $([System.DateTime]::Now.Year) RJ Hollberg</Copyright>
+    <PackageIcon>Logo.png</PackageIcon>
+    <PackageTags>$(PackageTags);onion-seed</PackageTags>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <RequireLicenseAcceptance>false</RequireLicenseAcceptance>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>symbols.nupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <PropertyGroup Label="CI/CD" Condition="'$(GITHUB_ACTIONS)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <RestoreLockedMode>true</RestoreLockedMode>
+  </PropertyGroup>
+
+  <!-- ─────────────────────────────────────────────────────────────────────────
+  │ Import shared settings
+  │
+  │ These settings might contain PropertyGroups and/or ItemGroups;
+  │ and the former must come before the latter. Therefore,
+  │ the import must happen here so it can span both categories.
+  └───────────────────────────────────────────────────────────────────────── -->
+
+  <Import Project="$(SolutionDir)\.props" />
+
+  <!-- ─────────────────────────────────────────────────────────────────────────
+  │ Standard dependencies for production projects
+  └───────────────────────────────────────────────────────────────────────── -->
+
+  <!-- These are only referenced during development, so `PrivateAssets="all"`.
+  Recommend using wildcards for patch version numbers, to reduce churn.
+  Recommend using latest versions. -->
+  <ItemGroup Label="NuGet Package">
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.*" PrivateAssets="all" />
+  </ItemGroup>
+
+  <!-- ─────────────────────────────────────────────────────────────────────────
+  │ Additional files for production projects
+  └───────────────────────────────────────────────────────────────────────── -->
+
+  <ItemGroup>
+    <None Include="$(SolutionDir)\LICENSE" Link="LICENSE" Pack="true" PackagePath="" />
+    <None Include="$(SolutionDir)\images\Logo.png" Pack="true" PackagePath="" />
+  </ItemGroup>
 
 </Project>
