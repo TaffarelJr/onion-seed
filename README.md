@@ -23,6 +23,16 @@ There is a great introductory article to the principles this project is intended
 
 View the [Wiki](https://github.com/TaffarelJr/onion-seed/wiki) for documentation about specific APIs included in this project.
 
+## Architectural Decision Records (ADRs)
+
+This project uses [Architectural Decision Records](https://adr.github.io/)
+to guide architectural decision-making during the design process,
+as well as document what decisions were made and why (for posterity).
+It uses a customized [MADR](https://adr.github.io/madr/) template
+to standardize the formatting of these ADRs.
+You can find the template and ADR files in the
+[docs/decisions](./docs/decisions) directory.
+
 ## How to build the code
 
 This is just a standard Visual Studio solution. [OnionSeed.sln](./OnionSeed.sln) is at the root of the repo - simply open it and build.
