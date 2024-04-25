@@ -25,13 +25,71 @@ View the [Wiki](https://github.com/TaffarelJr/onion-seed/wiki) for documentation
 
 ## Architectural Decision Records (ADRs)
 
-This project uses [Architectural Decision Records](https://adr.github.io/)
+This repo uses [Architectural Decision Records](https://adr.github.io/)
 to guide architectural decision-making during the design process,
 as well as document what decisions were made and why (for posterity).
 It uses a customized [MADR](https://adr.github.io/madr/) template
 to standardize the formatting of these ADRs.
 You can find the template and ADR files in the
 [docs/decisions](./docs/decisions) directory.
+
+## Monorepo Structure
+
+The repo is structured as a monorepo, with each component in its own directory.
+Over time this can make repos become large and unwieldy;
+but also makes it much easier to manage dependencies between projects in terms of
+development, versioning, publishing, and consumption in other projects.
+We feel this is a reasonable trade-off, and can mitigate most of the downsides.
+
+Here's a general overview of the main parts of the repo:
+
+- 📂 [`./`](./) - Contains only a few core files that apply to the entire repo.
+  Everything else should be contained in subdirectories
+  - 📂 [`docs/`](./docs/) - Contains documentation and diagrams
+    describing the architecture and design of OnionSeed
+  - 📂 [`src/`](./src/) - Contains all production source code,
+    with related components grouped together into additional subdirectories
+    where applicable
+    - 📦 [`TestUtilities/`](./src/TestUtilities/) - Contains test utilities
+    - 📦 [`Utilities/`](./src/Utilities/) - Contains utilities for general use
+    - 📄 [`.props`](./.props) - Defines settings that apply to all production projects
+  - 📂 [`test/`](./test/) - Contains all test code (in a structure that
+    mirrors the [src](./src/) directory above)
+    - 📄 [`.editorconfig`](./.editorconfig) - Defines IDE exclusions for test projects
+    - 📄 [`.props`](./.props) - Defines settings that apply to all test projects
+  - 📄 [`.editorconfig`](./.editorconfig) - Defines IDE settings for the entire repo
+  - 📄 [`.props`](./.props) - Defines the basic settings that apply to all projects
+  - [![](./images/VisualStudio2022.png) `OnionSeed.sln`](./OnionSeed.sln) -
+    Main Visual Studio solution that includes all components
+
+## Line Width Standards
+
+This repo encourages shorter lines of code
+to facilitate side-by-side comparison during code reviews:
+
+- Under 80 characters is ideal.
+- 100 characters is fine, just not preferred.
+- 120 characters is the max allowed length.
+- Anything over 120 characters must be wrapped.
+
+To help with this, vertical ruler settings have been defined.
+See [`.editorconfig`](./.editorconfig) for more information
+on how to enable them your IDE of choice.
+
+## Conventional Commits
+
+This repo uses [Conventional Commits](https://www.conventionalcommits.org)
+to standardize the format of commit messages,
+and automate processes such as versioning and the generation of release notes.
+While not strictly required, it's still highly recommended to follow this standard
+as it helps maintain our Semantic Versioning strategy.
+
+To help with this, a Git message template is available by
+running `git config commit.template .gitmessage` from the root of the repo.
+It should then be visible whenever you run `git commit` (excluding the `-m`)
+or in whatever other Git tool you prefer to use. This
+[Cheat sheet](https://kapeli.com/cheat_sheets/Conventional_Commits.docset/Contents/Resources/Documents/index)
+by Bogdan Popescu can help with the message format if you're new to CC.
 
 ## How to build the code
 
