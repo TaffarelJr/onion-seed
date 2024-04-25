@@ -62,6 +62,20 @@ Here's a general overview of the main parts of the repo:
   - [![](./images/VisualStudio2022.png) `OnionSeed.sln`](./OnionSeed.sln) -
     Main Visual Studio solution that includes all components
 
+## Line Width Standards
+
+This repo encourages shorter lines of code
+to facilitate side-by-side comparison during code reviews:
+
+- Under 80 characters is ideal.
+- 100 characters is fine, just not preferred.
+- 120 characters is the max allowed length.
+- Anything over 120 characters must be wrapped.
+
+To help with this, vertical ruler settings have been defined.
+See [`.editorconfig`](./.editorconfig) for more information
+on how to enable them your IDE of choice.
+
 ## How to build the code
 
 This is just a standard Visual Studio solution. [OnionSeed.sln](./OnionSeed.sln) is at the root of the repo - simply open it and build.
